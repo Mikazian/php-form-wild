@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+}
+
+form {
+    width: 50vw;
+    height: 70vh;
+    margin: 10% auto;
+    border-radius: 5px;
+    background-color: rgb(199, 202, 242);
+    box-shadow: 0 0 15px 0px #143c4625;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin: auto;
+}
+
+form label {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 2rem 0 .5rem 0;
+}
+
+input, select {
+    color: rgb(106, 115, 179);
+    background-color: rgb(234, 249, 255);
+    width: 100%;
+    margin: auto;
+    height: 2rem;
+    border: none;
+    border-radius: 0.2rem;
+    padding: .5rem;
+}
+
+form textarea {
+    color: rgb(106, 115, 179);
+    background-color: rgb(234, 249, 255);
+    font-family: 'Helvetica', sans-serif;
+    padding: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    height: 10rem;
+    border: none;
+    border-radius: .2rem;
+    resize: none;
+}
+
+.btn-form {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    font-size: 1rem;
+    font-weight: bold;
+    width: 10rem;
+    padding: 1rem;
+    
+    color: rgb(255, 255, 255);
+    background-color: rgb(129, 111, 195);
+    border: none;
+    border-radius: .2rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
