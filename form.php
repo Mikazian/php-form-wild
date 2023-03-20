@@ -11,21 +11,21 @@
     <form action="thanks.php" method="post">
       <div class="form-container">
         <label for="first-name">Prénom</label>
-        <input type="text" id="first-name" name="user_firstname" />
+        <input type="text" id="first-name" name="user_firstname" required/>
         <label for="last-name">Nom</label>
-        <input type="text" id="last-name" name="user_lastname" />
+        <input type="text" id="last-name" name="user_lastname" required/>
         <label for="mail">E-mail</label>
-        <input type="email" id="mail" name="user_mail" />
+        <input type="email" id="mail" name="user_mail" required/>
         <label for="number-phone">Numéro de téléphone</label>
-        <input type="tel" id="phone" name="user_phone" />
+        <input type="tel" id="phone" name="user_phone" required/>
         <label for="subject">Sujet</label>
-        <select name="user_subject" id="subject">
+        <select name="user_subject" id="subject" required>
             <option>JavaScript</option>
             <option>PHP</option>
             <option>HTML</option>
             <option>CSS</option>
         </select>
-        <textarea id="message" name="user_message">Votre message...</textarea>
+        <textarea id="message" name="user_message" required>Votre message...</textarea>
         <div class="btn-form">
           <button type="submit">Envoyer</button>
           <button type="reset">Annuler</button>

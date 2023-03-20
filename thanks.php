@@ -1,3 +1,28 @@
+<?php
+$errors = [];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  if (!isset($_POST['user_firstname']) || empty(trim($_POST['user_firstname'])))
+    $errors[] = "Le prénom est obligatoire";
+  if (!isset($_POST['user_lastname']) || empty(trim($_POST['user_lastname'])))
+    $errors[] = "Le nom est obligatoire";
+  if (!isset($_POST['user_mail']) || filter_var($_POST['user_mail'], FILTER_VALIDATE_EMAIL))
+    $errors[] = "L'adresse mail est obligatoire";
+  if (!isset($_POST['user_phone']) || empty(trim($_POST['user_phone'])))
+    $errors[] = "Le numéro de téléphone est obligatoire";
+  if (!isset($_POST['user_subject']) || empty(trim($_POST['user_subject'])))
+    $errors[] = "Un sujet est obligatoire";
+  if (!isset($_POST['user_message']) || empty(trim($_POST['user_message'])))
+    $errors[] = "Un message est obligatoire";
+};
+
+if (empty($errors)) {
+  //traitement du formulaire
+  //puis redirection
+  header('thanks.php');
+};
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
